@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headline Sentiment</title>
+    <!-- TailwindCSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-5">
+    <h1 class="text-2xl font-bold mb-5">Headline Sentiment Analysis</h1>
+    
+    <!-- Table for displaying the data -->
+    <table id="sentimentTable" class="min-w-full bg-white border border-gray-300">
+        <thead>
+            <tr>
+                <th class="border px-4 py-2">Headline</th>
+                <th class="border px-4 py-2">Sentiment</th>
+                <th class="border px-4 py-2">Score</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Data will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Fetch data from Flask route
+        fetch('/api/data')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById('tableBody');
+                
+                // Process and add rows to the table
+                data.forEach(item => {
+                    const row = document.createElement('tr');
+                    
+                    // Apply color based on sentiment value
+                    let sentimentColor = '';
+                    switch (item.sentiment) {
+                        case 'LABEL_0':
+                            sentimentColor = 'bg-red-500';
+                            break;
+                        case 'LABEL_1':
+                            sentimentColor = 'bg-gray-500';
+                            break;
+                        case 'LABEL_2':
+                            sentimentColor = 'bg-green-500';
+                            break;
+                        default:
+                            sentimentColor = 'bg-white';
+                    }
+                    
+                    // Insert row content
+                    row.innerHTML = `
+                        <td class="border px-4 py-2">${item.headline}</td>
+                        <td class="border px-4 py-2 ${sentimentColor}">${item.sentiment}</td>
+                        <td class="border px-4 py-2">${item.score}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
+</body>
+</html>
