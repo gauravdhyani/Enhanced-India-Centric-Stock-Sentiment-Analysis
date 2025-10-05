@@ -4,7 +4,6 @@ This documentation explains the three key components of the web-based sentiment 
 
  <figure>
   <img width="1896" height="948" alt="Screenshot 2025-10-05 030539" src="https://github.com/user-attachments/assets/be5c217f-df1f-4135-a35b-bd0a5dea0208" /><br>
-  <figcaption><b> Delhi Shapefile (Region of Interest) </b></figcaption>
 </figure>
 
 ---
