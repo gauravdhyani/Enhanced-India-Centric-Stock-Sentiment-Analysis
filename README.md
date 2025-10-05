@@ -5,7 +5,7 @@
 ## Project Aim
 The aim of this project is to develop an **India-focused stock sentiment analysis system** that can classify financial news and social media headlines related to **NIFTY 50 companies** into **Positive**, **Negative**, or **Neutral** sentiment.
 
-Most publicly available datasets that are centered on the US market, this project introduces a custom dataset **NifSent50** tailored for the Indian stock market, while also leveraging global datasets to test cross-market generalization.
+Most publicly available datasets that are centered on the US market, this project introduces a custom dataset [**NifSent50**](https://www.kaggle.com/datasets/gauravdhyani/nifsent) tailored for the Indian stock market, while also leveraging global datasets to test cross-market generalization.
 
 ---
 
