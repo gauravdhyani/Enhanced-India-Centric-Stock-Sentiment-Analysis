@@ -61,7 +61,7 @@ Hence, **building and fine-tuning a model specifically on Indian market behavior
 
 ## Results
 
-### 🔹 Baseline Models (before fine-tuning)
+### Baseline Models (before fine-tuning)
 - India-only performed best on Indian test data (~37% accuracy).
 - External-only struggled on Indian data (~33%).
 - Mixed slightly improved (~40%).
