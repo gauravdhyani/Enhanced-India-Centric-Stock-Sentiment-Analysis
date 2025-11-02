@@ -52,12 +52,12 @@ The dataset was built using three integrated pipelines:
 
 ## Access
 The full dataset is hosted on Kaggle:  
-👉 [NifSent50 Dataset](https://www.kaggle.com/datasets/gauravdhyani/nifsent)
+👉 [NifSent50 Dataset](https://www.kaggle.com/datasets/grounddominator/nifsent50-nifty-50-stocks-and-news-dataset)
 
 Clone/download it using the Kaggle API:
 
     ```bash
-    kaggle datasets download -d gauravdhyani/nifsent
+    kaggle datasets download -d grounddominator/nifsent50-nifty-50-stocks-and-news-dataset
     unzip nifsent.zip -d data/
     ```
 ---
